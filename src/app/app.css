@@ -1,0 +1,196 @@
+/* Full-screen hero section */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* Floating shapes animation */
+.floating-shapes .shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  animation: float 8s ease-in-out infinite;
+}
+.shape-1 {
+  width: 100px;
+  height: 100px;
+  background: #ff5f6d;
+  top: 10%;
+  left: 5%;
+}
+.shape-2 {
+  width: 80px;
+  height: 80px;
+  background: #ffc371;
+  top: 30%;
+  right: 10%;
+}
+.shape-3 {
+  width: 120px;
+  height: 120px;
+  background: #43cea2;
+  bottom: 10%;
+  left: 15%;
+}
+.shape-4 {
+  width: 60px;
+  height: 60px;
+  background: #185a9d;
+  bottom: 15%;
+  right: 20%;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Profile Card Styling */
+.profile-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 3rem 2rem;
+  max-width: 900px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Avatar */
+.avatar-wrapper {
+  margin-bottom: 1rem;
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 0px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  padding: 5px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Username and Title */
+.username {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f8f5f5;
+}
+.typewriter {
+  font-size: 1.2rem;
+  color: #eee;
+  border-right: 3px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  width: 0;
+  animation: typing 4s steps(30, end) 1s forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  to { width: 18ch; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* About Section */
+.about h2 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.about p {
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Skill Badges */
+.skill-badge {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  margin: 0.25rem;
+  font-weight: 500;
+  transition: transform 0.3s, background 0.3s;
+}
+.skill-badge:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+}
+
+/* Feature Cards */
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  color: #fff;
+  transition: transform 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+.feature-card i {
+  color: #ffd700;
+}
+
+/* Stats */
+.stats {
+  color: #fff;
+  text-align: center;
+}
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00e6e6;
+}
+.stat-label {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Contact Button */
+.contact-btn {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+.contact-btn:hover {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 75, 43, 0.4);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 2rem 1.5rem;
+  }
+  .username {
+    font-size: 1.5rem;
+  }
+  .typewriter {
+    font-size: 1rem;
+  }
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+  .stat-number {
+    font-size: 1.5rem;
+  }
+}
